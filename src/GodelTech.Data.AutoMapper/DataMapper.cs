@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using AutoMapper;
 
+[assembly: CLSCompliant(true)]
 namespace GodelTech.Data.AutoMapper
 {
     /// <summary>
