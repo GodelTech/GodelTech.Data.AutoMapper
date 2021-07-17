@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using GodelTech.Data.AutoMapper.Tests.Fakes;
 using AutoMapper;
@@ -8,52 +9,115 @@ namespace GodelTech.Data.AutoMapper.Tests
 {
     public class DataMapperTests
     {
-        [Fact]
-        public void Inherit_IDataMapper()
+        private readonly DataMapper _dataMapper;
+
+        public DataMapperTests()
         {
-            // Arrange
-            var mapperConfiguration = new MapperConfiguration(cfg => { });
-            var mapper = mapperConfiguration.CreateMapper();
+            var mapper = new MapperConfiguration(
+                cfg => cfg.CreateMap<FakeSource, FakeDestination>()
+                )
+                .CreateMapper();
 
-            // Act
-            var dataMapper = new DataMapper(mapper);
-
-            // Assert
-            Assert.IsAssignableFrom<IDataMapper>(dataMapper);
+            _dataMapper = new DataMapper(mapper);
         }
 
         [Fact]
-        public void Map_Success()
+        public void Constructor()
         {
-            // Arrange
-            var source = new List<FakeSource>
+            // Arrange & Act & Assert
+            Assert.IsAssignableFrom<IDataMapper>(_dataMapper);
+        }
+
+
+        public static IEnumerable<object[]> MapMemberData =>
+            new Collection<object[]>
             {
-                new FakeSource {Id = 1, SourceName = "FirstSourceName"},
-                new FakeSource {Id = 2, SourceName = "SecondSourceName"},
-                new FakeSource {Id = 3, SourceName = "ThirdSourceName"}
+                new object[] 
+                {
+                    new Collection<FakeSource>(),
+                    new Collection<FakeDestination>()
+                },
+                new object[]
+                {
+                    new Collection<FakeSource>
+                    {
+                        new FakeSource
+                        {
+                            Id = 1,
+                            Name = "Test Name",
+                            SourceName = "Test SourceName"
+                        }
+                    },
+                    new Collection<FakeDestination>
+                    {
+                        new FakeDestination
+                        {
+                            Id = 1,
+                            Name = "Test Name",
+                            DestinationName = null
+                        }
+                    }
+                },
+                new object[]
+                {
+                    new Collection<FakeSource>
+                    {
+                        new FakeSource
+                        {
+                            Id = 1,
+                            Name = "Test First Name",
+                            SourceName = "Test First SourceName"
+                        },
+                        new FakeSource
+                        {
+                            Id = 2,
+                            Name = "Test Second Name",
+                            SourceName = "Test Second SourceName"
+                        },
+                        new FakeSource
+                        {
+                            Id = 3,
+                            Name = "Test Third Name",
+                            SourceName = "Test Third SourceName"
+                        }
+                    },
+                    new Collection<FakeDestination>
+                    {
+                        new FakeDestination
+                        {
+                            Id = 1,
+                            Name = "Test First Name",
+                            DestinationName = null
+                        },
+                        new FakeDestination
+                        {
+                            Id = 2,
+                            Name = "Test Second Name",
+                            DestinationName = null
+                        },
+                        new FakeDestination
+                        {
+                            Id = 3,
+                            Name = "Test Third Name",
+                            DestinationName = null
+                        }
+                    }
+                }
             };
 
-            var mapperConfiguration = new MapperConfiguration(cfg => cfg.CreateMap<FakeSource, FakeDestination>());
-            var mapper = mapperConfiguration.CreateMapper();
-
-            var dataMapper = new DataMapper(mapper);
-
-            var expected = new List<FakeDestination>
-            {
-                new FakeDestination {Id = 1},
-                new FakeDestination {Id = 2},
-                new FakeDestination {Id = 3}
-            };
-
-            // Act
-            var result = dataMapper.Map<FakeDestination>(source.AsQueryable()).ToList();
+        [Theory]
+        [MemberData(nameof(MapMemberData))]
+        public void Map_Success(
+            Collection<FakeSource> sourceList,
+            Collection<FakeDestination> expectedResult)
+        {
+            // Arrange & Act
+            var result = _dataMapper
+                .Map<FakeDestination>(sourceList.AsQueryable())
+                .ToList();
 
             // Assert
-            for (var i = 0; i < expected.Count; i++)
-            {
-                Assert.Equal(expected[i].Id, result[i].Id);
-                Assert.Equal(expected[i].DestinationName, result[i].DestinationName);
-            }
+            Assert.Equal(expectedResult, result, new FakeDestinationEqualityComparer());
         }
     }
 }
