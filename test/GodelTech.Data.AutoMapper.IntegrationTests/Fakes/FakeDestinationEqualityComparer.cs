@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace GodelTech.Data.AutoMapper.Tests.Fakes
+namespace GodelTech.Data.AutoMapper.IntegrationTests.Fakes
 {
     public class FakeDestinationEqualityComparer : IEqualityComparer<FakeDestination>
     {

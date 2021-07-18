@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{941793B5-F14B-4893-A6B9-A3EA7CAC0380}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DE8F2A5C-8A38-45DF-85BA-83B1B0B47C52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodelTech.Data.AutoMapper", "src\GodelTech.Data.AutoMapper\GodelTech.Data.AutoMapper.csproj", "{1FE2126E-F2B9-4109-898A-209FA35F56C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodelTech.Data.AutoMapper", "src\GodelTech.Data.AutoMapper\GodelTech.Data.AutoMapper.csproj", "{00000000-0000-0000-0000-000000000001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodelTech.Data.AutoMapper.Tests", "test\GodelTech.Data.AutoMapper.Tests\GodelTech.Data.AutoMapper.Tests.csproj", "{180D7335-2A6C-431F-8ED5-EEAF043FF522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodelTech.Data.AutoMapper.Tests", "test\GodelTech.Data.AutoMapper.Tests\GodelTech.Data.AutoMapper.Tests.csproj", "{00000000-0000-0000-0000-000000000002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodelTech.Data.AutoMapper.IntegrationTests", "test\GodelTech.Data.AutoMapper.IntegrationTests\GodelTech.Data.AutoMapper.IntegrationTests.csproj", "{5976A043-B333-40EA-B864-7DE2ACE342DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,21 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1FE2126E-F2B9-4109-898A-209FA35F56C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FE2126E-F2B9-4109-898A-209FA35F56C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FE2126E-F2B9-4109-898A-209FA35F56C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FE2126E-F2B9-4109-898A-209FA35F56C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{180D7335-2A6C-431F-8ED5-EEAF043FF522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{180D7335-2A6C-431F-8ED5-EEAF043FF522}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{180D7335-2A6C-431F-8ED5-EEAF043FF522}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{180D7335-2A6C-431F-8ED5-EEAF043FF522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-0000-0000-0000-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-0000-0000-0000-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-0000-0000-0000-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-0000-0000-0000-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00000000-0000-0000-0000-000000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00000000-0000-0000-0000-000000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00000000-0000-0000-0000-000000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00000000-0000-0000-0000-000000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5976A043-B333-40EA-B864-7DE2ACE342DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5976A043-B333-40EA-B864-7DE2ACE342DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5976A043-B333-40EA-B864-7DE2ACE342DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5976A043-B333-40EA-B864-7DE2ACE342DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1FE2126E-F2B9-4109-898A-209FA35F56C0} = {941793B5-F14B-4893-A6B9-A3EA7CAC0380}
-		{180D7335-2A6C-431F-8ED5-EEAF043FF522} = {DE8F2A5C-8A38-45DF-85BA-83B1B0B47C52}
+		{00000000-0000-0000-0000-000000000001} = {941793B5-F14B-4893-A6B9-A3EA7CAC0380}
+		{00000000-0000-0000-0000-000000000002} = {DE8F2A5C-8A38-45DF-85BA-83B1B0B47C52}
+		{5976A043-B333-40EA-B864-7DE2ACE342DC} = {DE8F2A5C-8A38-45DF-85BA-83B1B0B47C52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EDB9D4D-3A7D-4FED-B63C-2CA7D284B0A7}
