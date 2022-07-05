@@ -1,0 +1,8 @@
+{
+  "stryker-config": {
+    "test-projects": [
+      "../../test/GodelTech.Data.AutoMapper.IntegrationTests/GodelTech.Data.AutoMapper.IntegrationTests.csproj",
+      "../../test/GodelTech.Data.AutoMapper.Tests/GodelTech.Data.AutoMapper.Tests.csproj"
+    ]
+  }
+}
