@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
-using GodelTech.Data.AutoMapper.Tests.Fakes;
 using AutoMapper;
-using Xunit;
+using GodelTech.Data.AutoMapper.Tests.Fakes;
 using Moq;
+using Xunit;
 
 namespace GodelTech.Data.AutoMapper.Tests
 {

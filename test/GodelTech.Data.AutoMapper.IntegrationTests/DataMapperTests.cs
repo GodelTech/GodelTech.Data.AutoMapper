@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using GodelTech.Data.AutoMapper.IntegrationTests.Fakes;
 using AutoMapper;
+using GodelTech.Data.AutoMapper.IntegrationTests.Fakes;
 using Xunit;
 
 namespace GodelTech.Data.AutoMapper.IntegrationTests
@@ -24,7 +24,7 @@ namespace GodelTech.Data.AutoMapper.IntegrationTests
         public static IEnumerable<object[]> MapMemberData =>
             new Collection<object[]>
             {
-                new object[] 
+                new object[]
                 {
                     new Collection<FakeSource>(),
                     new Collection<FakeDestination>()

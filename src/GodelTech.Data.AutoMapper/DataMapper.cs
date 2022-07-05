@@ -8,7 +8,7 @@ namespace GodelTech.Data.AutoMapper
     /// <summary>
     /// DataMapper class.
     /// </summary>
-    /// <seealso cref="GodelTech.Data.IDataMapper" />
+    /// <seealso cref="IDataMapper" />
     public class DataMapper : IDataMapper
     {
         private readonly IMapper _mapper;
