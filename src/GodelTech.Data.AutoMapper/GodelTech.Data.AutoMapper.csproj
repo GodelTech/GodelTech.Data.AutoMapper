@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GodelTech.Data" Version="6.3.0" />
+    <PackageReference Include="GodelTech.Data" Version="6.4.0" />
     <PackageReference Include="AutoMapper" Version="12.0.0" />
 
     <!-- Source Link needs this -->
