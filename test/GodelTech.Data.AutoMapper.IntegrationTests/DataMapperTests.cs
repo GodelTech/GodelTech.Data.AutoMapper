@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using AutoMapper;
+using FluentAssertions;
 using GodelTech.Data.AutoMapper.IntegrationTests.Fakes;
 using Xunit;
 
@@ -109,7 +110,7 @@ namespace GodelTech.Data.AutoMapper.IntegrationTests
                 .ToList();
 
             // Assert
-            Assert.Equal(expectedResult, result, new FakeDestinationEqualityComparer());
+            result.Should().BeEquivalentTo(expectedResult);
         }
     }
 }
