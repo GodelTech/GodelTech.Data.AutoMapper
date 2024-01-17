@@ -4,13 +4,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>GodelTech.Data.AutoMapper</PackageId>
     <VersionPrefix>3.0.0</VersionPrefix>
-    <Authors>v.rodchenko</Authors>
+    <Authors>Vladimir Rodchenko</Authors>
     <Company>Godel Technologies</Company>
     <Description>Library for using AutoMapper with GodelTech.Data.</Description>
     <Copyright>Godel Technologies 2020</Copyright>
-    <PackageLicenseUrl>https://github.com/GodelTech/GodelTech.Data.AutoMapper/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/GodelTech/GodelTech.Data.AutoMapper/wiki</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>https://www.gravatar.com/avatar/839234621070de51e7b9cabd5ceee8fe?s=64</PackageIconUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/GodelTech/GodelTech.Data.AutoMapper</RepositoryUrl>
     <PackageTags>AutoMapper GodelTech Data</PackageTags>
 
@@ -28,6 +30,17 @@
     <!-- SonarQube needs this -->
     <ProjectGuid>{00000000-0000-0000-0000-000000000010}</ProjectGuid>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GodelTech.Data" Version="8.0.0" />
