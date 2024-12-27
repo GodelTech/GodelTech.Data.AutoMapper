@@ -1,6 +1,6 @@
 # GodelTech.Data.AutoMapper
 
-# Description
+## Description
 GodelTech.Data.AutoMapper is a .NET library that integrates AutoMapper with GodelTech.Data, providing a seamless way to map data entities. It implements the IDataMapper interface from GodelTech.Data using the AutoMapper NuGet package, allowing efficient and straightforward object-to-object mapping.
 
 ## Overview
